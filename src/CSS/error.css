@@ -1,0 +1,135 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #B9B4C7;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 15vw;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#errorb {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 8px 16px;
+    font-size: 25px;
+    transition: box-shadow 0.2s ease-in-out;
+    text-decoration: underline;
+    font-weight: bold;
+    background: linear-gradient(45deg, #4070f4, #bc68ec);
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 260px;
+    height: 50px;
+}
+
+#errorb:hover {
+    border: 2px solid #ffffff;
+    background: transparent;
+}
+
+.error-container .error-op {
+    height: 280px;
+    position: relative;
+    z-index: -1;
+}
+
+.error-container .error-op h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 230px;
+    margin: 0px;
+    font-weight: 900;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url('/src/Images/Eback.png') no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 1024px) {
+    .error-container {
+        padding: 20px;
+    }
+
+    .error-container .error-op h1 {
+        font-size: 200px;
+    }
+
+    #errorb {
+        font-size: 22px;
+        width: 240px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .error-container {
+        padding: 15px;
+    }
+
+    .error-container .error-op h1 {
+        font-size: 180px;
+    }
+
+    #errorb {
+        font-size: 20px;
+        width: 220px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .error-container {
+        padding: 10px;
+    }
+
+    .error-container .error-op {
+        height: 220px;
+    }
+
+    .error-container .error-op h1 {
+        font-size: 120px;
+    }
+
+    #errorb {
+        font-size: 18px;
+        width: 200px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-container {
+        padding: 5px;
+        gap: 15px;
+    }
+
+    .error-container .error-op {
+        height: 180px;
+    }
+
+    .error-container .error-op h1 {
+        font-size: 80px;
+    }
+
+    #errorb {
+        font-size: 16px;
+        width: 180px;
+        height: 35px;
+    }
+}

@@ -1,0 +1,27 @@
+.xp-card {
+    width: 100%;
+    background-color: #1c1c1e;
+    color: #B9B4C7;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.xp-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.xp-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.xp-message {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+}

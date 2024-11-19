@@ -1,0 +1,325 @@
+.ProfileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#topDiv,
+#lowDiv {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+#topDiv {
+    gap: 10px;
+}
+
+#lowDiv {
+    margin-right: 3%;
+    margin-left: 5%;
+    gap: 14px;
+}
+
+#TwoElem {
+    display: flex;
+    height: 410px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*-------------> Media queries for the profile page <-------------*/
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .wrapper {
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .left h4 {
+        font-size: 1.1rem;
+    }
+
+    .info h3 {
+        font-size: 1.2rem;
+    }
+
+    .info_data div {
+        flex: 1 1 48%;
+        padding: 6px 10px;
+    }
+
+    .welcome-message {
+        font-size: 28px;
+    }
+
+    #welcome_info {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .logout-button {
+        padding: 4px 12px;
+        font-size: 13px;
+    }
+
+    .audit-card {
+        padding: 15px;
+        text-align: left;
+    }
+
+    .progress-label {
+        font-size: 0.85rem;
+    }
+
+    progress {
+        width: 90%;
+    }
+
+    .xp-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .xp-value {
+        font-size: 1.15rem;
+    }
+
+    .audit-card-table {
+        width: 520px;
+        height: 540px;
+        padding: 14px;
+    }
+
+    .column-2 {
+        max-height: 380px;
+    }
+
+    .column h3 {
+        font-size: 0.95rem;
+    }
+
+    .audit-item {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left h4 {
+        font-size: 1rem;
+    }
+
+    .left p {
+        font-size: 0.9rem;
+    }
+
+    .info h3 {
+        font-size: 1.1rem;
+    }
+
+    .info_data {
+        gap: 8px;
+    }
+
+    .info_data div {
+        flex: 1 1 100%;
+        padding: 6px 10px;
+    }
+
+    .welcome-message {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #welcome_info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logout-button {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+
+    #TwoElem {
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .audit-card {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .progress-label {
+        font-size: 0.8rem;
+    }
+
+    progress {
+        width: 100%;
+    }
+
+    .xp-card {
+        padding: 10px;
+    }
+
+    .xp-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .xp-value {
+        font-size: 1rem;
+    }
+
+    .audit-card-table {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+    }
+
+    .column-2 {
+        max-height: 300px;
+    }
+
+    .column h3 {
+        font-size: 0.9rem;
+    }
+
+    .audit-item {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 16px;
+        box-shadow: none;
+        width: 95%;
+    }
+
+    .left h4 {
+        font-size: 0.9rem;
+    }
+
+    .left p {
+        font-size: 0.8rem;
+    }
+
+    .info h3 {
+        font-size: 1rem;
+    }
+
+    .info_data {
+        gap: 6px;
+    }
+
+    .info_data div {
+        flex: 1 1 100%;
+        padding: 4px 8px;
+    }
+
+    .welcome-message {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #welcome_info {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .logout-button {
+        padding: 6px 20px;
+        font-size: 11px;
+    }
+
+    #TwoElem {
+        height: auto;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 95%;
+    }
+
+    .audit-card {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .bar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-label {
+        font-size: 0.75rem;
+        margin-bottom: 5px;
+    }
+
+    progress {
+        width: 100%;
+    }
+
+    .xp-card {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .xp-card h2 {
+        font-size: 1rem;
+    }
+
+    .xp-value {
+        font-size: 0.9rem;
+    }
+
+    .xp-message {
+        font-size: 0.8rem;
+    }
+
+    .audit-card-table {
+        width: 95%;
+        height: auto;
+        padding: 8px;
+        box-shadow: none;
+    }
+
+    .column-2 {
+        max-height: 250px;
+    }
+
+    .column h3 {
+        font-size: 0.85rem;
+        text-align: left;
+    }
+
+    .audit-item {
+        font-size: 0.75rem;
+        text-align: left;
+    }
+
+    .rank-card {
+        width: 95%;
+    }
+
+    .cardSKG {
+        width: 350px;
+    }
+
+
+}

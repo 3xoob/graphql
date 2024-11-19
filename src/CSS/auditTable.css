@@ -1,0 +1,79 @@
+.audit-card-table {
+    width: 560px;
+    background-color: #1c1c1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    overflow: hidden;
+    height: 580px;
+}
+
+.audit-card-table h2 {
+    text-align: center;
+    margin: 0 0 16px;
+    color: #B9B4C7;
+}
+
+.audit-table {
+    display: flex;
+    overflow-y: auto;
+}
+
+.audit-table::-webkit-scrollbar {
+    width: 8px;
+}
+
+.audit-table::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.audit-table::-webkit-scrollbar-thumb:hover {
+    background-color: #444;
+}
+
+.column-2 {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.column-2::-webkit-scrollbar {
+    width: 8px;
+}
+
+.column-2::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.column-2::-webkit-scrollbar-thumb:hover {
+    background-color: #444;
+}
+
+.column {
+    flex: 1;
+    padding: 8px;
+}
+
+.column h3 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #eee;
+    border-bottom: 1px solid #555;
+    padding-bottom: 4px;
+}
+
+.audit-item {
+    font-size: 0.9rem;
+    margin: 4px 0;
+    color: #ccc;
+}
+
+.audit-item.pass {
+    color: #00af00;
+}
+
+.audit-item.fail {
+    color: #FF0000;
+}

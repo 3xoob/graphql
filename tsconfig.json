@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // Strict mode (9)
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+    // No unused code (4)
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    // No implicit code (2)
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    // Others (5)
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    // Module resolution settings
+    "module": "commonjs",
+    "moduleResolution": "node",
+    // Enable ES module interoperability
+    "esModuleInterop": true,
+    "target": "ES2023",
+    "lib": [
+      "ES2023",
+      "dom",
+      "DOM.Iterable"
+    ]
+  }
+}

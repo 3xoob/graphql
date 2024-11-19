@@ -1,0 +1,263 @@
+.HomeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.profile-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background-color: #B9B4C7;
+}
+
+.image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #B9B4C7;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.image .profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.profile-card .text-data,
+.profile-card .analytics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+.text-data .name {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.text-data .job {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile-card .media-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.media-buttons a:hover {
+    color: #B9B4C7;
+}
+
+.media-buttons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+.analytics .Details {
+    margin: 0 10px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.vertical-line {
+    height: 350px;
+    width: 10px;
+    background-color: #B9B4C7;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #B9B4C7;
+    margin-bottom: 5px;
+}
+
+.text-3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #B9B4C7;
+    margin-bottom: 5px;
+}
+
+.text-2 {
+    font-size: 14px;
+    color: #ffffff;
+    max-width: 300px;
+    line-height: 1.5;
+}
+
+.button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #4070f4, #bc68ec);
+    border: 2px solid #B9B4C7;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: transparent;
+}
+
+@media (min-width: 1024px) {
+    .HomeContainer {
+        gap: 50px;
+        padding: 20px;
+    }
+
+    .profile-card {
+        max-width: 370px;
+        padding: 25px;
+    }
+
+    .header .text-1 {
+        font-size: 50px;
+    }
+
+    .header .text-3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .HomeContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    .profile-card {
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    .header .text-1 {
+        font-size: 40px;
+    }
+
+    .header .text-3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .HomeContainer {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .profile-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .header .text-1 {
+        font-size: 32px;
+    }
+
+    .header .text-3 {
+        font-size: 18px;
+    }
+
+    .text-2 {
+        max-width: 250px;
+        font-size: 12px;
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .vertical-line {
+        height: 200px;
+        width: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .HomeContainer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header .text-1 {
+        font-size: 24px;
+    }
+
+    .header .text-3 {
+        font-size: 16px;
+    }
+
+    .text-2 {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .profile-card {
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}

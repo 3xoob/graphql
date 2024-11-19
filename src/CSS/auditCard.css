@@ -1,0 +1,70 @@
+.audit-card {
+    background-color: #1c1c1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.audit-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #B9B4C7;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.progress-label {
+    font-size: 0.9rem;
+    color: #fff;
+    white-space: nowrap;
+    min-width: 60px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.data-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #fff;
+    gap: 10px;
+}
+
+.ratio-display {
+    font-size: 3rem;
+}
+
+.hint {
+    font-size: 1rem;
+}
+
+progress {
+    width: 80%;
+    height: 12px;
+    appearance: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #2e2e2e;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #2e2e2e;
+}
+
+progress::-webkit-progress-value {
+    background-color: #6200ea;
+    transition: width 0.5s ease;
+}
+
+progress::-moz-progress-bar {
+    background-color: #6200ea;
+}
+
+progress::-ms-fill {
+    background-color: #6200ea;
+}

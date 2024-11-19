@@ -1,4 +1,4 @@
-import renderPage from "./app/router";
+import { renderPage } from "./app/router";
 
 window.addEventListener("popstate", () => {
   renderPage();

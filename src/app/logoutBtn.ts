@@ -25,6 +25,5 @@ export function renderLogoutBtn() {
 // function to log out the user
 export function logout() {
     localStorage.removeItem("jwt");
-    history.pushState(null, "", "/login");
     renderLoginPage();
 }

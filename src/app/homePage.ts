@@ -40,7 +40,6 @@ export function createHomePage() {
     tryButton.className = "button";
     tryButton.textContent = "Try it!";
     tryButton.addEventListener("click", () => {
-        history.pushState(null, "", "/login");
         renderLoginPage();
     });
 

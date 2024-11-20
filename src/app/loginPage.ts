@@ -124,7 +124,6 @@ export function renderLoginPage() {
                 Errmsg.textContent = "An unexpected error occurred.";
             }
         } else {
-            history.pushState(null, "", "/profile");
             renderProfilePage();
         }
     });

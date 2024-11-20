@@ -40,6 +40,7 @@ export function createHomePage() {
     tryButton.className = "button";
     tryButton.textContent = "Try it!";
     tryButton.addEventListener("click", () => {
+        history.pushState(null, "", "/login");
         renderLoginPage();
     });
 
@@ -53,7 +54,7 @@ export function createHomePage() {
     imageContainer.className = "image";
 
     const profileImage = document.createElement("img");
-    profileImage.src = "https://ibb.co/vqzrK3f";
+    profileImage.src = "./src/Images/profile.jpg";
     profileImage.alt = "Profile Image";
     profileImage.className = "profile-img";
 

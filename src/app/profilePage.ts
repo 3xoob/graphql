@@ -13,6 +13,7 @@ import { GET_USER_INFO } from "./queries";
 export async function renderProfilePage() {
     const jwt = localStorage.getItem("jwt");
     if (!jwt || jwt.split(".").length !== 3) {
+        history.pushState(null, "", "/login");
         renderLoginPage();
         return;
     }

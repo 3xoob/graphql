@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "dist", 
     // Strict mode (9)
     "strict": true,
     "alwaysStrict": true,
@@ -26,7 +25,7 @@
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
     // Module resolution settings
-    "module": "ES2022",
+    "module": "commonjs",
     "moduleResolution": "node",
     // Enable ES module interoperability
     "esModuleInterop": true,

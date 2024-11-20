@@ -50,10 +50,6 @@
     border: 3px solid #fff;
 }
 
-.image {
-    background-image: url("https://ibb.co/vqzrK3f");
-}
-
 .profile-card .text-data,
 .profile-card .analytics {
     display: flex;

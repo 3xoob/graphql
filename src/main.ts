@@ -1,12 +1,7 @@
-// import { renderPage } from "./app/router";
+import { renderPage } from "./app/router";
 
-import { createHomePage } from "./app/homePage";
+window.addEventListener("popstate", () => {
+  renderPage();
+});
 
-// window.addEventListener("popstate", () => {
-//   // renderPage();
-// });
-
-// renderPage();
-
-
-createHomePage();
+renderPage();

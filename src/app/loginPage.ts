@@ -13,7 +13,9 @@ export async function authenticateUser(username: any, password: any) {
             },
         });
         if (response.ok) {
+            console.log(response)
             const token = await response.text();
+            console.log(token)
             if (token) {
                 const cleanToken = token.replace(/^"(.*)"$/, "$1");
                 localStorage.setItem("jwt", cleanToken);
@@ -122,6 +124,7 @@ export function renderLoginPage() {
                 Errmsg.textContent = "An unexpected error occurred.";
             }
         } else {
+            history.pushState(null, "", "/profile");
             renderProfilePage();
         }
     });

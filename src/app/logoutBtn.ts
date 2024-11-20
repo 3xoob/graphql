@@ -1,5 +1,4 @@
-import { createHomePage } from "./homePage";
-
+import { renderLoginPage } from "./loginPage";
 // Function to render the logout button
 export function renderLogoutBtn() {
     const app = document.getElementById("welcome_info");
@@ -63,7 +62,8 @@ export async function logout() {
 
         localStorage.removeItem("jwt");
 
-        createHomePage();
+        history.pushState(null, "", "/login");
+        renderLoginPage();
     } else {
         console.error("No JWT token found in localStorage.");
     }

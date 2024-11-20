@@ -25,7 +25,7 @@
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
     // Module resolution settings
-    "module": "commonjs",
+    "module": "ES2022",
     "moduleResolution": "node",
     // Enable ES module interoperability
     "esModuleInterop": true,

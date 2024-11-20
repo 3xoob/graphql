@@ -8,5 +8,5 @@ export default defineConfig({
       external: ['react-is'], // Mark `react-is` as an external dependency
     },
   },
-  base: '/graphql/', // Adjust as needed for deployment
+  base: '/', // Adjust as needed for deployment
 });

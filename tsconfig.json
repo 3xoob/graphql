@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    // Enable all strict type-checking options
+    // Strict mode (9)
     "strict": true,
     "alwaysStrict": true,
     "noImplicitAny": true,
@@ -10,46 +10,30 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "useUnknownInCatchVariables": true,
-    // Disallow unused code
+    // No unused code (4)
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    // Disallow implicit behavior
+    // No implicit code (2)
     "noImplicitOverride": true,
     "noImplicitReturns": true,
-    // Additional safety checks
+    // Others (5)
     "noUncheckedIndexedAccess": true,
     "noPropertyAccessFromIndexSignature": true,
     "noFallthroughCasesInSwitch": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
-    // Fix for using JavaScript files
-    "allowJs": true,
-    "checkJs": false, // Optional: Disable type-checking for JS files
     // Module resolution settings
-    "module": "ESNext", // Use ES modules for better interop
+    "module": "commonjs",
     "moduleResolution": "node",
     // Enable ES module interoperability
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    // Debugging and Output
-    "sourceMap": true,
-    "inlineSources": true,
-    "outDir": "dist", // Directory for compiled output
-    "rootDir": "src", // Root directory of your source code
-    "declaration": true, // Generate .d.ts files
-    "declarationMap": true, // Enable maps for declaration files
-    // Experimental features
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    // File checks
-    "skipLibCheck": true, // Skip type checking for node_modules for faster builds
-    // Target modern JavaScript
     "target": "ES2023",
-    "lib": ["ES2023", "DOM", "DOM.Iterable"]
-  },
-  "include": ["src/**/*"], // Include all TypeScript files in src
-  "exclude": ["node_modules", "dist"] // Exclude node_modules and build output
+    "lib": [
+      "ES2023",
+      "dom",
+      "DOM.Iterable"
+    ]
+  }
 }

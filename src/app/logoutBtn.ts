@@ -29,7 +29,20 @@ export async function logout() {
 
     if (token) {
         try {
-            const response = await fetch("https://learn.reboot01.com/api/auth/signout", {
+            const expireResponse = await fetch("https://learn.reboot01.com/api/auth/expire", {
+                method: "GET",
+                headers: {
+                    "x-jwt-token": token,
+                },
+            });
+
+            if (!expireResponse.ok) {
+                const expireData = await expireResponse.json();
+                console.error("Error expiring token:", expireData);
+                return;
+            }
+
+            const signoutResponse = await fetch("https://learn.reboot01.com/api/auth/signout", {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`,
@@ -38,24 +51,14 @@ export async function logout() {
                 body: JSON.stringify({}),
             });
 
-            if (response.ok) {
+            if (signoutResponse.ok) {
                 console.log("Successfully signed out!");
             } else {
-                console.error("Error signing out:", response.statusText);
+                const signoutData = await signoutResponse.json();
+                console.error("Error signing out:", signoutData);
             }
         } catch (error) {
             console.error("Network error:", error);
-        }
-
-        try {
-            await fetch("https://learn.reboot01.com/api/auth/expire", {
-                method: "GET",
-                headers: {
-                    "x-jwt-token": token,
-                },
-            });
-        } catch (error) {
-            console.error("Error expiring token:", error);
         }
 
         localStorage.removeItem("jwt");

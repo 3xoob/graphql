@@ -16,4 +16,5 @@ export function renderPage() {
     } else {
         renderNotFoundPage();
     }
+    console.log(base + path)
 }

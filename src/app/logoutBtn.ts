@@ -24,33 +24,44 @@ export function renderLogoutBtn() {
 }
 
 // function to log out the user
-export function logout() {
+export async function logout() {
     const token = localStorage.getItem("jwt");
 
     if (token) {
-        fetch("https://learn.reboot01.com/api/auth/signout", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`,
-            },
-            body: JSON.stringify({}),
-        })
-            .then((response) => {
-                if (response.ok) {
-                    console.log("Successfully signed out!");
-                } else {
-                    console.error("Error signing out:", response.statusText);
-                }
-            })
-            .catch((error) => {
-                console.error("Network error:", error);
+        try {
+            const response = await fetch("https://learn.reboot01.com/api/auth/signout", {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({}),
             });
+
+            if (response.ok) {
+                console.log("Successfully signed out!");
+            } else {
+                console.error("Error signing out:", response.statusText);
+            }
+        } catch (error) {
+            console.error("Network error:", error);
+        }
+
+        try {
+            await fetch("https://learn.reboot01.com/api/auth/expire", {
+                method: "GET",
+                headers: {
+                    "x-jwt-token": token,
+                },
+            });
+        } catch (error) {
+            console.error("Error expiring token:", error);
+        }
+
+        localStorage.removeItem("jwt");
+
+        createHomePage();
     } else {
         console.error("No JWT token found in localStorage.");
     }
-
-
-    localStorage.removeItem("jwt");
-    createHomePage();
 }

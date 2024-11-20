@@ -1,4 +1,5 @@
-import { renderLoginPage } from "./loginPage";
+import { createHomePage } from "./homePage";
+
 // Function to render the logout button
 export function renderLogoutBtn() {
     const app = document.getElementById("welcome_info");
@@ -24,6 +25,32 @@ export function renderLogoutBtn() {
 
 // function to log out the user
 export function logout() {
+    const token = localStorage.getItem("jwt");
+
+    if (token) {
+        fetch("https://learn.reboot01.com/api/auth/signout", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`,
+            },
+            body: JSON.stringify({}),
+        })
+            .then((response) => {
+                if (response.ok) {
+                    console.log("Successfully signed out!");
+                } else {
+                    console.error("Error signing out:", response.statusText);
+                }
+            })
+            .catch((error) => {
+                console.error("Network error:", error);
+            });
+    } else {
+        console.error("No JWT token found in localStorage.");
+    }
+
+
     localStorage.removeItem("jwt");
-    renderLoginPage();
+    createHomePage();
 }

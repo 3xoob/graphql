@@ -1,12 +1,8 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      external: ['react-is'], // Mark `react-is` as an external dependency
-    },
-  },
-  base: '/', // Adjust as needed for deployment
+  base: "https://3xoob.github.io/graphql/",
 });

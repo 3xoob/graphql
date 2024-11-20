@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "dist", 
     // Strict mode (9)
     "strict": true,
     "alwaysStrict": true,

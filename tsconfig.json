@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    // Strict mode (9)
+    // Enable all strict type-checking options
     "strict": true,
     "alwaysStrict": true,
     "noImplicitAny": true,
@@ -10,30 +10,46 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "useUnknownInCatchVariables": true,
-    // No unused code (4)
+    // Disallow unused code
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    // No implicit code (2)
+    // Disallow implicit behavior
     "noImplicitOverride": true,
     "noImplicitReturns": true,
-    // Others (5)
+    // Additional safety checks
     "noUncheckedIndexedAccess": true,
     "noPropertyAccessFromIndexSignature": true,
     "noFallthroughCasesInSwitch": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
+    // Fix for using JavaScript files
+    "allowJs": true,
+    "checkJs": false, // Optional: Disable type-checking for JS files
     // Module resolution settings
-    "module": "commonjs",
+    "module": "ESNext", // Use ES modules for better interop
     "moduleResolution": "node",
     // Enable ES module interoperability
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    // Debugging and Output
+    "sourceMap": true,
+    "inlineSources": true,
+    "outDir": "dist", // Directory for compiled output
+    "rootDir": "src", // Root directory of your source code
+    "declaration": true, // Generate .d.ts files
+    "declarationMap": true, // Enable maps for declaration files
+    // Experimental features
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    // File checks
+    "skipLibCheck": true, // Skip type checking for node_modules for faster builds
+    // Target modern JavaScript
     "target": "ES2023",
-    "lib": [
-      "ES2023",
-      "dom",
-      "DOM.Iterable"
-    ]
-  }
+    "lib": ["ES2023", "DOM", "DOM.Iterable"]
+  },
+  "include": ["src/**/*"], // Include all TypeScript files in src
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and build output
 }

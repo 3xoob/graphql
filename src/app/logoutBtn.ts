@@ -45,7 +45,7 @@ export async function logout() {
             const signoutResponse = await fetch("https://learn.reboot01.com/api/auth/signout", {
                 method: "POST",
                 headers: {
-                    "Authorization": `Bearer ${token}`,
+                    "Authorization": `${token}`,
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({}),

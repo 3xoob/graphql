@@ -53,7 +53,7 @@ export function createHomePage() {
     imageContainer.className = "image";
 
     const profileImage = document.createElement("img");
-    profileImage.src = "/src/Images/profile.jpg";
+    profileImage.src = "https://ibb.co/vqzrK3f";
     profileImage.alt = "Profile Image";
     profileImage.className = "profile-img";
 

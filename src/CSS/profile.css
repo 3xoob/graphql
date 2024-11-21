@@ -109,6 +109,15 @@
     .audit-item {
         font-size: 0.85rem;
     }
+
+    .popup-card {
+        width: 70%;
+        padding: 15px;
+    }
+
+    .popup-card button {
+        padding: 10px 15px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -202,6 +211,15 @@
 
     .audit-item {
         font-size: 0.8rem;
+    }
+
+    .popup-card {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .popup-card button {
+        padding: 8px 12px;
     }
 }
 
@@ -321,5 +339,12 @@
         width: 350px;
     }
 
+    .popup-card {
+        width: 90%;
+        padding: 8px;
+    }
 
+    .popup-card button {
+        padding: 6px 10px;
+    }
 }
